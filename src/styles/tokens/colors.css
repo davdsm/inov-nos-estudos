@@ -1,0 +1,62 @@
+:root{
+  /* ——— Brand core (sampled from the emblem) ——— */
+  --navy-900:#061B3C; --navy-800:#0A2A57; --navy-700:#123A6B; --navy-600:#1C5089;
+  --navy-300:#8FA8C6; --navy-100:#DCE5F0;
+
+  --teal-700:#0B7C92; --teal-600:#0FA6C0; --teal-500:#2FBACE; --teal-400:#52C4D3;
+  --teal-200:#A4E0E1; --teal-100:#D8F1F2;
+
+  --amber-600:#F59A1E; --amber-500:#FFB44C; --amber-400:#FFC870; --amber-200:#FFE3B0;
+  --coral-600:#EE4F46; --coral-500:#FF6A62; --coral-300:#FF9C96; --coral-200:#FFD6D3;
+  --pink-500:#FFA3B2; --pink-300:#FFC2CC; --pink-200:#FFE0E5;
+
+  /* ——— Neutrals ——— */
+  --white:#FFFFFF;
+  --sand-50:#FBF9F6; --sand-100:#F4F1EC;
+  --grey-100:#F1F4F8; --grey-200:#E2E8F0; --grey-400:#A9B4C4; --grey-600:#61708A;
+  --ink:#0E1B2E;
+
+  /* ——— Semantic: text ——— */
+  --text-heading:var(--navy-800);
+  --text-body:#2C3B55;
+  --text-muted:var(--grey-600);
+  --text-on-dark:var(--white);
+  --text-on-brand:var(--white);
+  --text-link:var(--teal-700);
+  --text-link-hover:var(--navy-800);
+  --text-accent:var(--coral-600);
+
+  /* ——— Semantic: surfaces ——— */
+  --surface-page:var(--sand-50);
+  --surface-card:var(--white);
+  --surface-sunken:var(--grey-100);
+  --surface-brand:var(--navy-800);
+  --surface-brand-soft:var(--teal-100);
+  --surface-accent-soft:var(--amber-200);
+  --surface-warm:var(--pink-200);
+
+  /* ——— Semantic: interactive ——— */
+  --action-primary:var(--coral-500);
+  --action-primary-hover:var(--coral-600);
+  --action-secondary:var(--teal-600);
+  --action-secondary-hover:var(--teal-700);
+  --action-tertiary:var(--amber-500);
+  --action-tertiary-hover:var(--amber-600);
+  --action-disabled:var(--grey-200);
+  --focus-ring:var(--teal-500);
+
+  /* ——— Semantic: lines ——— */
+  --border-subtle:var(--grey-200);
+  --border-strong:var(--navy-300);
+  --border-brand:var(--teal-400);
+
+  /* ——— Status ——— */
+  --status-success:#2FA86B; --status-success-soft:#DFF3E8;
+  --status-warning:var(--amber-600); --status-warning-soft:var(--amber-200);
+  --status-danger:var(--coral-600); --status-danger-soft:var(--coral-200);
+  --status-info:var(--teal-600); --status-info-soft:var(--teal-100);
+
+  /* ——— The four-colour ring (emblem order) ——— */
+  --ring-1:var(--teal-400); --ring-2:var(--pink-500); --ring-3:var(--amber-400); --ring-4:var(--teal-200);
+  --gradient-ring:conic-gradient(from 210deg,var(--teal-400),var(--pink-500) 30%,var(--amber-400) 58%,var(--teal-200) 84%,var(--teal-400));
+}

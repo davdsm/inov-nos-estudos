@@ -1,0 +1,7 @@
+/* Inov@ nos Estudos — webfonts.
+   SUBSTITUTION NOTE: no font binaries were supplied with the brand assets.
+   Baloo 2 (rounded heavy display) is the closest Google Fonts match to the
+   INOV@ wordmark; Caveat stands in for the handwritten tagline;
+   Nunito Sans carries body copy. Swap the @import for local @font-face
+   rules once the real files arrive. */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&family=Caveat:wght@400..700&display=swap");

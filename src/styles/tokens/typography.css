@@ -1,0 +1,26 @@
+:root{
+  --font-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --font-script:"Caveat","Segoe Script",cursive;
+  --font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace;
+
+  --weight-regular:400; --weight-medium:500; --weight-semibold:600; --weight-bold:700; --weight-black:800;
+
+  /* Display scale — Baloo 2 800 */
+  --text-hero:clamp(2.75rem,5.2vw,4.25rem);
+  --text-d1:3rem; --text-d2:2.25rem; --text-d3:1.75rem; --text-d4:1.375rem;
+  /* Body scale — Nunito Sans */
+  --text-lg:1.1875rem; --text-md:1.0625rem; --text-sm:0.9375rem; --text-xs:0.8125rem;
+  --text-eyebrow:0.75rem;
+
+  --leading-tight:1.06; --leading-snug:1.22; --leading-body:1.62; --leading-loose:1.75;
+  --tracking-tight:-0.015em; --tracking-normal:0; --tracking-eyebrow:0.14em;
+
+  --script-tagline:1.75rem;
+}
+h1,h2,h3,h4,.u-display{font-family:var(--font-display);font-weight:var(--weight-black);color:var(--text-heading);line-height:var(--leading-snug);letter-spacing:var(--tracking-tight)}
+body{font-family:var(--font-body);font-size:var(--text-md);line-height:var(--leading-body);color:var(--text-body);background:var(--surface-page)}
+a{color:var(--text-link);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--text-link-hover)}
+.u-eyebrow{font-family:var(--font-body);font-weight:var(--weight-bold);font-size:var(--text-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--teal-700)}
+.u-script{font-family:var(--font-script);font-weight:600;font-size:var(--script-tagline);color:var(--navy-800);line-height:1.15}

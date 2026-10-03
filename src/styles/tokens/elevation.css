@@ -1,0 +1,14 @@
+:root{
+  --shadow-none:none;
+  --shadow-xs:0 1px 2px rgba(10,42,87,.06);
+  --shadow-sm:0 2px 8px rgba(10,42,87,.08);
+  --shadow-md:0 10px 24px -8px rgba(10,42,87,.16);
+  --shadow-lg:0 24px 48px -16px rgba(10,42,87,.22);
+  --shadow-card:0 8px 20px -10px rgba(10,42,87,.18);
+  --shadow-press:inset 0 2px 4px rgba(6,27,60,.18);
+  --shadow-ring:0 0 0 3px rgba(47,186,206,.35);
+  --blur-veil:saturate(1.1) blur(14px); /* @kind other */
+  --veil-light:rgba(255,255,255,.72);
+  --veil-navy:rgba(6,27,60,.62);
+  --scrim-photo:linear-gradient(to top,rgba(6,27,60,.78) 0%,rgba(6,27,60,.15) 55%,rgba(6,27,60,0) 100%); /* @kind other */
+}
