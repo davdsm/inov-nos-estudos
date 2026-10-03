@@ -23,8 +23,10 @@
 
 ## Páginas
 
-- [Início](/#topo)
+- [Início](/)
 - [Disciplinas](/#disciplinas)
 - [Professoras](/#professoras)
 - [Marcar aula experimental](/#marcar)
 - [Contactos](/#contactos)
+- [Termos e Condições](/termos)
+- [Política de Privacidade](/privacidade)

@@ -1,0 +1,23 @@
+{
+  "name": "Inov@ nos Estudos",
+  "short_name": "Inov@",
+  "description": "Centro de estudo em Gemunde (Maia). Apoio ao estudo do 1.º ao 12.º ano.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF9F6",
+  "theme_color": "#0A2A57",
+  "lang": "pt-PT",
+  "icons": [
+    {
+      "src": "/assets/inova-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://davdsm.github.io/inov-nos-estudos/sitemap.xml
