@@ -31,10 +31,7 @@ export function PageEntrance({ children, armDelay = 1100 }) {
 
   return (
     <PageMotionContext.Provider value={{ armed }}>
-      <div className={`page-entrance${ready ? ' is-ready' : ''}`}>
-        <div className="page-entrance__veil" aria-hidden="true" />
-        <div className="page-entrance__content">{children}</div>
-      </div>
+      <div className={`page-entrance${ready ? ' is-ready' : ''}`}>{children}</div>
     </PageMotionContext.Provider>
   )
 }

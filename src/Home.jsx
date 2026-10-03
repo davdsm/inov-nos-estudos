@@ -118,8 +118,11 @@ export default function Home({
         path="/"
         jsonLd={homeJsonLd()}
       />
-      <SiteHeader showNav />
+      <div className="page-entrance__header">
+        <SiteHeader showNav />
+      </div>
 
+      <div className="page-entrance__body">
       {festaBanner && (
         <Reveal as="div" stagger={0.3} style={{ background: 'var(--amber-200)' }}>
           <div
@@ -927,6 +930,7 @@ export default function Home({
       </main>
 
       <SiteFooter />
+      </div>
     </div>
     </PageEntrance>
   )
