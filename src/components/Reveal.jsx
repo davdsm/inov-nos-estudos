@@ -10,6 +10,8 @@ export function Reveal({
   as: Tag = 'div',
   once = true,
   threshold = 0.2,
+  /** 'up' | 'down' | 'none' — direção do fade-in */
+  from = 'up',
   ...rest
 }) {
   const ref = useRef(null)
@@ -27,7 +29,6 @@ export function Reveal({
 
     const io = new IntersectionObserver(
       ([entry]) => {
-        // Só dispara quando pelo menos 20% da secção/bloco está visível
         if (entry.isIntersecting && entry.intersectionRatio >= threshold) {
           setVisible(true)
           if (once) io.disconnect()
@@ -40,11 +41,14 @@ export function Reveal({
     return () => io.disconnect()
   }, [armed, once, threshold, visible])
 
+  const fromClass =
+    from === 'down' ? ' reveal-item--down' : from === 'none' ? ' reveal-item--fade' : ''
+
   const items = Children.map(children, (child, i) => {
     if (!isValidElement(child)) return child
     const prevClass = child.props.className ? `${child.props.className} ` : ''
     return cloneElement(child, {
-      className: `${prevClass}reveal-item`,
+      className: `${prevClass}reveal-item${fromClass}`,
       style: {
         ...child.props.style,
         '--reveal-delay': `${delay + i * stagger}s`,

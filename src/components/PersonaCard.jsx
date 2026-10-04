@@ -17,6 +17,7 @@ export function PersonaCard({
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
       display: 'flex',
+      flexWrap: 'wrap',
       gap: 'var(--space-5)',
       alignItems: 'flex-start',
       padding: 'var(--space-5)',
@@ -24,6 +25,10 @@ export function PersonaCard({
       background: dark ? 'var(--surface-brand)' : tone === 'teal' ? 'var(--surface-brand-soft)' : 'var(--surface-card)',
       border: 'var(--border-thin) solid var(--border-subtle)',
       boxShadow: 'var(--shadow-card)',
+      width: '100%',
+      maxWidth: '100%',
+      minWidth: 0,
+      boxSizing: 'border-box',
       ...style
     }
   }, rest), /*#__PURE__*/React.createElement(RingFrame, {

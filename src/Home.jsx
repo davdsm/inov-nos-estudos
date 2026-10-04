@@ -59,7 +59,7 @@ const fullBtn = {
 }
 
 export default function Home({
-  heroLayout = 'A',
+  heroLayout = 'C',
   festaBanner = true,
   showCampanha = true,
 }) {
@@ -111,18 +111,19 @@ export default function Home({
   }
 
   return (
-    <PageEntrance armDelay={1200}>
+    <PageEntrance blankMs={400} armDelay={450}>
     <div style={{ minHeight: '100vh', background: 'var(--sand-50)' }}>
       <SeoHead
         title="Inova nos Estudos - Apoio ao estudo em Gemunde"
         path="/"
         jsonLd={homeJsonLd()}
       />
-      <div className="page-entrance__header">
-        <SiteHeader showNav />
-      </div>
+      <Reveal from="down" stagger={0.3}>
+        <div>
+          <SiteHeader showNav />
+        </div>
+      </Reveal>
 
-      <div className="page-entrance__body">
       {festaBanner && (
         <Reveal as="div" stagger={0.3} style={{ background: 'var(--amber-200)' }}>
           <div
@@ -381,7 +382,10 @@ export default function Home({
                 alignItems: 'center',
               }}
             >
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+              <Reveal
+                stagger={0.3}
+                style={{ display: 'flex', flexDirection: 'column', gap: 18 }}
+              >
                 <span className="u-eyebrow" style={{ color: 'var(--teal-700)' }}>
                   Centro de estudo em Gemunde
                 </span>
@@ -400,8 +404,10 @@ export default function Home({
                 <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, maxWidth: 500 }}>
                   O teu filho estuda todos os dias com a Prof.ª Sofia e a Prof.ª Beatriz.
                 </p>
-              </div>
-              <div
+              </Reveal>
+              <Reveal
+                stagger={0.3}
+                delay={0.9}
                 style={{
                   background: 'var(--white)',
                   border: '1px solid var(--grey-200)',
@@ -413,23 +419,21 @@ export default function Home({
                   gap: 20,
                 }}
               >
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {SERVICOS.map((s) => (
-                    <div
-                      key={s}
-                      style={{
-                        display: 'flex',
-                        gap: 12,
-                        alignItems: 'baseline',
-                        fontSize: 17,
-                        fontWeight: 700,
-                      }}
-                    >
-                      <span style={{ color: 'var(--teal-600)' }}>→</span>
-                      <span>{s}</span>
-                    </div>
-                  ))}
-                </div>
+                {SERVICOS.map((s) => (
+                  <div
+                    key={s}
+                    style={{
+                      display: 'flex',
+                      gap: 12,
+                      alignItems: 'baseline',
+                      fontSize: 17,
+                      fontWeight: 700,
+                    }}
+                  >
+                    <span style={{ color: 'var(--teal-600)' }}>→</span>
+                    <span>{s}</span>
+                  </div>
+                ))}
                 <div style={{ height: 1, background: 'var(--grey-200)' }} />
                 <Button
                   variant="primary"
@@ -451,7 +455,7 @@ export default function Home({
                 >
                   914 829 000 · também por WhatsApp
                 </p>
-              </div>
+              </Reveal>
             </div>
           </section>
         )}
@@ -930,7 +934,6 @@ export default function Home({
       </main>
 
       <SiteFooter />
-      </div>
     </div>
     </PageEntrance>
   )

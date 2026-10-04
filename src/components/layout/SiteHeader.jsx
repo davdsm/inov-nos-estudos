@@ -57,12 +57,14 @@ export function SiteHeader({ showNav = false }) {
               fontWeight: 800,
               fontSize: 19,
               lineHeight: 1,
+              whiteSpace: 'nowrap',
             }}
+            className="site-brand-text"
           >
             Inov@ nos Estudos
           </span>
         </Link>
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+        <nav style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
           {showNav && wide && (
             <div style={{ display: 'flex', gap: 20, fontWeight: 700, fontSize: 15 }}>
               <a href="/#disciplinas" style={{ textDecoration: 'none', color: 'var(--navy-800)' }}>

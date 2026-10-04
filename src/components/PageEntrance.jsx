@@ -6,7 +6,8 @@ export function usePageMotion() {
   return useContext(PageMotionContext)
 }
 
-export function PageEntrance({ children, armDelay = 1100 }) {
+/** Ecrã em branco → depois os Reveals fazem fade-in dos elementos. */
+export function PageEntrance({ children, blankMs = 450, armDelay = 500 }) {
   const [ready, setReady] = useState(false)
   const [armed, setArmed] = useState(false)
 
@@ -17,21 +18,21 @@ export function PageEntrance({ children, armDelay = 1100 }) {
       return
     }
 
-    const enter = requestAnimationFrame(() => {
-      requestAnimationFrame(() => setReady(true))
-    })
-
+    const show = window.setTimeout(() => setReady(true), blankMs)
     const arm = window.setTimeout(() => setArmed(true), armDelay)
 
     return () => {
-      cancelAnimationFrame(enter)
+      window.clearTimeout(show)
       window.clearTimeout(arm)
     }
-  }, [armDelay])
+  }, [blankMs, armDelay])
 
   return (
     <PageMotionContext.Provider value={{ armed }}>
-      <div className={`page-entrance${ready ? ' is-ready' : ''}`}>{children}</div>
+      <div className={`page-entrance${ready ? ' is-ready' : ''}`}>
+        <div className="page-entrance__blank" aria-hidden="true" />
+        {children}
+      </div>
     </PageMotionContext.Provider>
   )
 }
