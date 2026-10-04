@@ -70,8 +70,10 @@ export default function Home({
   const [disciplina, setDisciplina] = useState('')
   const [aceitouTermos, setAceitouTermos] = useState(false)
   const [enviado, setEnviado] = useState(false)
+  const [aEnviar, setAEnviar] = useState(false)
   const [erroTel, setErroTel] = useState('')
   const [erroTermos, setErroTermos] = useState('')
+  const [erroEnvio, setErroEnvio] = useState('')
 
   useEffect(() => {
     const onR = () => setW(window.innerWidth)
@@ -86,8 +88,9 @@ export default function Home({
   const heroB = heroLayout === 'B'
   const heroC = heroLayout === 'C'
 
-  function enviar(e) {
+  async function enviar(e) {
     e.preventDefault()
+    setErroEnvio('')
     if (!aceitouTermos) {
       setErroTermos('Para continuar, aceita os Termos e Condições e a Política de Privacidade.')
       return
@@ -96,7 +99,26 @@ export default function Home({
       setErroTel('Confirma o número: são 9 algarismos.')
       return
     }
-    setEnviado(true)
+    if (aEnviar) return
+    setAEnviar(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: nome.trim(),
+          phone: telefone.trim(),
+          ano,
+          disciplina,
+        }),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setEnviado(true)
+    } catch {
+      setErroEnvio('Não conseguimos enviar agora. Tenta de novo ou liga para 914 829 000.')
+    } finally {
+      setAEnviar(false)
+    }
   }
 
   function reset() {
@@ -108,6 +130,7 @@ export default function Home({
     setAceitouTermos(false)
     setErroTel('')
     setErroTermos('')
+    setErroEnvio('')
   }
 
   return (
@@ -833,8 +856,9 @@ export default function Home({
                     </span>
                   </label>
                   {erroTermos && <span className="terms-error">{erroTermos}</span>}
-                  <button type="submit" className="submit-btn">
-                    Pedir aula experimental
+                  {erroEnvio && <span className="terms-error">{erroEnvio}</span>}
+                  <button type="submit" className="submit-btn" disabled={aEnviar}>
+                    {aEnviar ? 'A enviar…' : 'Pedir aula experimental'}
                   </button>
                 </form>
               )}
@@ -896,6 +920,14 @@ export default function Home({
                     <a href="tel:+351914829000">914 829 000</a>
                     <a href="tel:+351914874972">914 874 972</a>
                   </div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <span className="u-eyebrow" style={{ color: 'var(--text-muted)' }}>
+                    Email
+                  </span>
+                  <a href="mailto:inovanosestudos@gmail.com" style={{ fontWeight: 700 }}>
+                    inovanosestudos@gmail.com
+                  </a>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                   <span className="u-eyebrow" style={{ color: 'var(--text-muted)' }}>
