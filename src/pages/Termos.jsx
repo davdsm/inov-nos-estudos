@@ -29,7 +29,7 @@ export default function Termos() {
         <br />
         Via Engenheiro Belmiro Mendes de Azevedo 311, Gemunde, Maia, Portugal
         <br />
-        Telefone / WhatsApp: 914 829 000 e 914 874 972
+        Telefone / WhatsApp: 914 829 000
         <br />
         Instagram:{' '}
         <a href="https://www.instagram.com/inovanosestudos" target="_blank" rel="noreferrer">
@@ -139,7 +139,7 @@ export default function Termos() {
 
       <h2>11. Contacto</h2>
       <p>
-        Para questões sobre estes Termos: 914 829 000 / 914 874 972, ou através dos canais
+        Para questões sobre estes Termos: 914 829 000, ou através dos canais
         indicados na secção de contactos do site.
       </p>
     </LegalPage>

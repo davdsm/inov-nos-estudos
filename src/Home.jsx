@@ -243,7 +243,7 @@ export default function Home({
                   Liga-nos e combinamos uma aula experimental.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-                  <Button variant="primary" size="lg" as="a" href="tel:+351914874972">
+                  <Button variant="primary" size="lg" as="a" href="tel:+351914829000">
                     Ligar agora
                   </Button>
                   <Button variant="outline" size="lg" as="a" href="#marcar">
@@ -369,20 +369,20 @@ export default function Home({
                   size="lg"
                   full
                   as="a"
-                  href="tel:+351914874972"
+                  href="tel:+351914829000"
                   style={fullBtn}
                 >
-                  Ligar 914 874 972
+                  Ligar 914 829 000
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   full
                   as="a"
-                  href="tel:+351914829000"
+                  href="https://wa.me/351914829000"
                   style={outlineOnDark}
                 >
-                  Ligar 914 829 000
+                  WhatsApp
                 </Button>
                 <a href="#marcar" style={{ color: 'var(--white)', fontWeight: 700, fontSize: 15 }}>
                   Prefiro deixar o contacto →
@@ -747,7 +747,7 @@ export default function Home({
                   variant="outline"
                   size="md"
                   as="a"
-                  href="https://wa.me/351914874972"
+                  href="https://wa.me/351914829000"
                   style={outlineOnDark}
                 >
                   WhatsApp
@@ -918,7 +918,7 @@ export default function Home({
                   </span>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 16px', fontWeight: 700 }}>
                     <a href="tel:+351914829000">914 829 000</a>
-                    <a href="tel:+351914874972">914 874 972</a>
+                    <a href="https://wa.me/351914829000">WhatsApp</a>
                   </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>

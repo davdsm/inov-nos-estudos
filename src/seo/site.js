@@ -17,8 +17,8 @@ export const SITE = {
     postalCode: '',
     country: 'PT',
   },
-  phones: ['+351914829000', '+351914874972'],
-  phoneDisplay: ['914 829 000', '914 874 972'],
+  phones: ['+351914829000'],
+  phoneDisplay: ['914 829 000'],
   email: 'inovanosestudos@gmail.com',
   instagram: 'https://www.instagram.com/inovanosestudos',
   geo: {

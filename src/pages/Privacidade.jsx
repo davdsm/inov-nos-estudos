@@ -32,7 +32,7 @@ export default function Privacidade() {
         <br />
         Via Engenheiro Belmiro Mendes de Azevedo 311, Gemunde, Maia, Portugal
         <br />
-        Telefone / WhatsApp: 914 829 000 e 914 874 972
+        Telefone / WhatsApp: 914 829 000
         <br />
         Para exercer direitos ou colocar questões de privacidade, contacte-nos pelos números
         acima ou presencialmente na morada indicada.

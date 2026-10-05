@@ -94,7 +94,7 @@ export function SiteHeader({ showNav = false }) {
               ← Voltar ao site
             </Link>
           )}
-          <Button variant="secondary" size="sm" as="a" href="tel:+351914874972">
+          <Button variant="secondary" size="sm" as="a" href="tel:+351914829000">
             Ligar
           </Button>
         </nav>
